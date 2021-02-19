@@ -8,7 +8,7 @@ let categories = []
 export const CategorySelect = () => {
   getCategories()
   categories = useCategories()
-  render()
+  
 }
 
 const render = () => {
@@ -18,6 +18,7 @@ const render = () => {
           ${categories.map(category => `<option value="${category.id}">${category.text}</option>`).join("")}
       </select>
   `
+render(categories)
 }
 
 eventHub.addEventListener("change", changeEvent => {

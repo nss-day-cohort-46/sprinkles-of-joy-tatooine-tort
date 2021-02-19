@@ -14,7 +14,7 @@ export const ProductList = () => {
     .then(() => {
       bakeryProducts = useProducts()
       bakeryCategories = useCategories()
-      render()
+      render(getCategories)
     })
 }
 
