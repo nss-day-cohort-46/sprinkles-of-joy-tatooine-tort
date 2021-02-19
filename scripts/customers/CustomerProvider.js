@@ -4,14 +4,14 @@ let customers = []
 
 export const useCustomers = () => customers.slice()
 
-export const getCustomer = () => {
+export const getCustomers = () => {
   return fetch(`${bakeryAPI.baseURL}/customers`)
     .then(response => response.json())
     .then(parsedResponse => {
       customers = parsedResponse
     })
 }
-export const getCustomerId = (id) => {
+export const getCustomer = (id) => {
   return fetch(`${bakeryAPI.baseURL}/customers/${id}`)
     .then(response => response.json())
 }
